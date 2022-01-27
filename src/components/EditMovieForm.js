@@ -34,6 +34,10 @@ const EditMovieForm = (props) => {
 			})
 	}, [])
 
+	if (!movie) {
+		return <h2>Loading...</h2>;
+	  }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.put(`http://localhost:9000/api/movies/${id}`, movie)

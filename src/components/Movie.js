@@ -21,6 +21,21 @@ const Movie = (props) => {
             })
     }, [id]);
 
+    if (!movie) {
+		return <h2>Loading...</h2>;
+	  }
+
+    const handleDelete = () => {
+        axios.delete(`http://localhost:9000/api/movies/${id}`)
+            .then(resp => {
+                setMovie(resp.data);
+                push('/movies')
+            })
+            .catch( err => {
+                console.log(err);
+            })
+    }
+
     return(<div className="modal-page col">
         <div className="modal-dialog">
             <div className="modal-content">
@@ -52,7 +67,7 @@ const Movie = (props) => {
                         <section>
                             <span className="m-2 btn btn-dark">Favorite</span>
                             <Link to={`/movies/edit/${movie.id}`} className="m-2 btn btn-success">Edit</Link>
-                            <span className="delete"><input type="button" className="m-2 btn btn-danger" value="Delete"/></span>
+                            <span  className="delete"><input onClick={handleDelete} type="button" className="m-2 btn btn-danger" value="Delete"/></span>
                         </section>
                     </div>
                 </div>
@@ -61,4 +76,4 @@ const Movie = (props) => {
     </div>);
 }
 
-export default Movie;
+export default Movie; 

@@ -7,6 +7,10 @@ import FavoriteMovieList from './FavoriteMovieList';
 const MovieList = (props)=> {
     const { movies, favoriteMovies } = props;
 
+    if (!movies) {
+		return <h2>Loading...</h2>;
+	  }
+
     return (
         <div className="col">
             <table className="table table-striped table-hover">
