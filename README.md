@@ -80,20 +80,20 @@ CRUD applications are the foundation of most web applications. Being able to man
 
 * [X] Build an event handler that makes a request to delete the currently viewed movie. Observe what is returned from the request.
 
-* [ ] You will once again need to keep the server and state data in sync. In `App.js`, complete the `deleteMovie` method so that it receives an id, filters out any movie with that id and sets state to that resultant movie list.
+* [X] You will once again need to keep the server and state data in sync. In `App.js`, complete the `deleteMovie` method so that it receives an id, filters out any movie with that id and sets state to that resultant movie list.
 
-* [ ] Pass `deleteMovie` into the appropriate component.
+* [X] Pass `deleteMovie` into the appropriate component.
 
-* [ ] Run `deleteMovie` on the currently selected movie when your delete request is complete and redirect the user to the `/movies` route.
+* [X] Run `deleteMovie` on the currently selected movie when your delete request is complete and redirect the user to the `/movies` route.
 
 #### Adding a Movie
 > *Alright! You ready! Let's see you use the skills of the previous steps to build a crud function from start to finish.*
 
-* [ ] Use `EditMovieForm.js` as a model to build an `AddMovieForm` component from scratch. The component should hold all the attributes of a new movie in local state.
+* [X] Use `EditMovieForm.js` as a model to build an `AddMovieForm` component from scratch. The component should hold all the attributes of a new movie in local state.
 
-* [ ] Add in a route that allows access to `AddMovieForm`.
+* [X] Add in a route that allows access to `AddMovieForm`.
 
-* [ ] Locate the part of the ui that should redirect to your new `AddMovieForm`. Make that button works as expected.
+* [X] Locate the part of the ui that should redirect to your new `AddMovieForm`. Make that button works as expected.
 
 * [ ] In `AddMovieForm,` add an event handler for form submission. When the form is submitted, run the approprate request for adding a movie with the component's state values.
 
